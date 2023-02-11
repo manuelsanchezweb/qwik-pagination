@@ -3,7 +3,6 @@ import { $, useStore } from "@builder.io/qwik";
 interface PaginationState {
   currentPage: number;
   pageSize: number;
-  total: number;
 }
 
 interface PaginationActions {

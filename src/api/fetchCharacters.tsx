@@ -1,9 +1,9 @@
 // https://dummyjson.com/users
 
-export async function fetchPokemons(
+export async function fetchCharacters(
   controller?: AbortController
 ): Promise<any> {
-  const response = await fetch("../../data.json", {
+  const response = await fetch("https://dummyjson.com/users", {
     signal: controller?.signal,
   });
 

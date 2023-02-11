@@ -42,7 +42,6 @@ export default component$(() => {
   const initialState = {
     currentPage: 1,
     pageSize: 10,
-    total: elementsArray.length,
   };
   const [state, actions] = usePagination(initialState);
   const start = (state.currentPage - 1) * state.pageSize;
@@ -51,7 +50,7 @@ export default component$(() => {
 
   const isPrevDisabled = state.currentPage === 1;
   const isNextDisabled =
-    state.currentPage === Math.ceil(state.total / state.pageSize);
+    state.currentPage === Math.ceil(elementsArray.length / state.pageSize);
 
   return (
     <>
@@ -71,7 +70,7 @@ export default component$(() => {
         </div>
         <p>Página actual: {state.currentPage}</p>
         <p>Número max de elementos por página: {state.pageSize}</p>
-        <p>Número total de elementos: {state.total}</p>
+        <p>Número total de elementos: {elementsArray.length}</p>
       </div>
     </>
   );

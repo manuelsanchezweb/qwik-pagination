@@ -69,19 +69,6 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 .elements {
   min-height: 50vh;
   display: grid;
@@ -111,4 +98,28 @@ nav {
 
 .pagination__buttons button {
   font-size: 0.75rem;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  list-style: none;
+  margin: 20px 0;
+  grid-gap: 20px;
+}
+
+ul img {
+  max-width: 100px;
+}
+
+@media screen and (min-width: 520px) {
+  ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
